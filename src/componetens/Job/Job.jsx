@@ -1,7 +1,7 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types'
 const Job = ({ job }) => {
   const {id,
     logo,
@@ -48,5 +48,8 @@ const Job = ({ job }) => {
     </div>
   );
 };
+Job.propTypes ={
+    job:PropTypes.array
+}
 
 export default Job;
