@@ -1,19 +1,21 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types'
-const JobCard = ({card}) => {
-    const {id,
-        logo,
-        job_title,
-        company_name,
-        remote_or_onsite,
-        location,
-        job_type,
-        salary
-      } = card;
-    return (
-        <div className="card card-compact bg-base-100 shadow-xl ">
+import PropTypes from "prop-types";
+const JobCard = ({ card }) => {
+  const {
+    id,
+    logo,
+    job_title,
+    company_name,
+    remote_or_onsite,
+    location,
+    job_type,
+    salary,
+  } = card;
+  return (
+    <div className="card card-compact bg-base-100 shadow-xl p-5 ">
+      <div className="flex justify-around gap-5">
         <figure>
           <img src={logo} alt="Shoes" />
         </figure>
@@ -41,14 +43,17 @@ const JobCard = ({card}) => {
           </div>
           <div className="card-actions mx-3">
             <Link to={`/job/${id}`}>
-              <button className="btn btn-primary font-bold">View Details</button>
+              <button className="btn btn-primary font-bold">
+                View Details
+              </button>
             </Link>
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
 };
-JobCard.propTypes ={
-    card:PropTypes.array
-}
+JobCard.propTypes = {
+  card: PropTypes.array,
+};
 export default JobCard;
