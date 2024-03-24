@@ -1,12 +1,14 @@
 const Banner = () => {
   return (
-    <div className="hero bg-[#FFFFFF]">
+    <div className="hero mt-10 mb-10 bg-[#FFFFFF] border-2 rounded-2xl">
       <div className="hero-content flex-col lg:flex-row-reverse">
+        <div>
         <img
-          src='../../assets/logo/google.png'
+          src='/public/user.png'
           className="rounded-lg shadow-2xl"
         />
-        <div>
+        </div>
+        <div className="px-5">
           <h1 className="text-5xl font-bold">
             <span className="text-[#1A1919]">
               One Step <br /> Closer To Your
